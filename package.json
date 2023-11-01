@@ -45,7 +45,7 @@
     "regenerator-runtime": "0.14.0",
     "require-json5": "^1.1.0",
     "sass": "1.69.5",
-    "sass-loader": "^11.0.1",
+    "sass-loader": "13.3.2",
     "ts-loader": "9.5.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.5.3",
