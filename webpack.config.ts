@@ -44,8 +44,8 @@ const config: MergedConfiguration = {
     //conditionNames: ['browser']
   },
   output: {
-    path: path.resolve(__dirname, 'public/build'),
-    publicPath: '/build/',
+    path: path.resolve(__dirname, 'public/dist'),
+    publicPath: '/dist/',
     filename: '[name].js',
     chunkFilename: '[name].[id].js',
   },
