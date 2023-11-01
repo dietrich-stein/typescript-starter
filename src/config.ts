@@ -9,6 +9,6 @@ abstract class Config {
     foreground: '#FFFF00',
     background: '#000000',
   };*/
-};
+}
 
 export default Config;

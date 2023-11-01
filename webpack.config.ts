@@ -19,9 +19,7 @@ const isDev = !isProd;
 /**
  * Define paths to any stylesheets you wish to include at the top of the CSS bundle.
  */
-const stylesheets = [
-  './src/styles/main.scss'
-];
+const stylesheets = ['./src/styles/main.scss'];
 
 /**
  * Change this to `true` to generate source maps alongside your production bundle. This is useful for debugging, but
@@ -32,10 +30,7 @@ const sourceMapsInProduction = false;
 const config: MergedConfiguration = {
   mode: isProd ? 'production' : 'development',
   entry: {
-    bundle: [
-      ...stylesheets,
-      './src/main.ts'
-    ]
+    bundle: [...stylesheets, './src/main.ts'],
   },
   resolve: {
     /*alias: {
@@ -43,18 +38,8 @@ const config: MergedConfiguration = {
       //'@src': path.resolve(__dirname, 'src/'),
       //'@styles': path.resolve(__dirname, 'src/styles/'),
     },*/
-    extensions: [
-      '.ts',
-      '.tsx',
-      '.js',
-      '.scss',
-      '.css'
-    ],
-    mainFields: [
-      'browser',
-      'module',
-      'main'
-    ],
+    extensions: ['.ts', '.tsx', '.js', '.scss', '.css'],
+    mainFields: ['browser', 'module', 'main'],
     //modules: [path.resolve(__dirname, 'src'), 'node_modules']
     //conditionNames: ['browser']
   },
@@ -62,18 +47,14 @@ const config: MergedConfiguration = {
     path: path.resolve(__dirname, 'public/build'),
     publicPath: '/build/',
     filename: '[name].js',
-    chunkFilename: '[name].[id].js'
+    chunkFilename: '[name].[id].js',
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/, // /\.(?:js|ts)$/,
-        include: [
-          path.resolve(__dirname, 'src'),
-        ],
-        exclude: [
-          /node_modules/,
-        ],
+        include: [path.resolve(__dirname, 'src')],
+        exclude: [/node_modules/],
         use: {
           loader: 'babel-loader',
           options: {
@@ -85,48 +66,43 @@ const config: MergedConfiguration = {
                 {
                   debug: false,
                   corejs: { version: 3 },
-                  useBuiltIns: 'usage'
-                }
+                  useBuiltIns: 'usage',
+                },
               ],
               [
                 // Docs: https://babeljs.io/docs/babel-preset-typescript
-                "@babel/preset-typescript",
-                {}
-              ]
+                '@babel/preset-typescript',
+                {},
+              ],
             ],
-            plugins: ['@babel/plugin-transform-runtime']
-          }
-        }
+            plugins: ['@babel/plugin-transform-runtime'],
+          },
+        },
       },
       {
         test: /\.(scss|sass)$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
           },
           'css-loader',
           {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  Autoprefixer
-                ]
-              }
-            }
+                plugins: [Autoprefixer],
+              },
+            },
           },
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
       {
         test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        test:  /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/,
+        test: /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/,
         loader: 'file-loader',
       },
     ],
@@ -136,7 +112,7 @@ const config: MergedConfiguration = {
       $: 'jquery',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: '[name].css',
     }),
   ],
   devtool: isProd ? false : 'source-map',
@@ -144,17 +120,17 @@ const config: MergedConfiguration = {
     hot: true,
     static: {
       directory: path.join(__dirname, 'public'),
-    }
+    },
   },
   stats: {
     chunks: false,
     chunkModules: false,
     modules: false,
     assets: true,
-    entrypoints: false
+    entrypoints: false,
   },
   target: isDev ? 'web' : 'browserslist',
-}
+};
 
 // Additional configuration for production bundles
 if (isProd) {
@@ -173,7 +149,7 @@ if (isProd) {
           },
         ],
       },
-    })
+    }),
   );
 
   // Minify and treeshake JS

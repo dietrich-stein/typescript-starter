@@ -31,23 +31,17 @@
       "es2017" // esnext
     ],
     "baseUrl": ".",
-		"paths": {
-			"src/*": ["src/*"]
-		},
+    "paths": {
+      "src/*": ["src/*"]
+    },
     "verbatimModuleSyntax": false,
-		"importsNotUsedAsValues": "remove"
+    "importsNotUsedAsValues": "remove"
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
   },
-  "include": [
-    "src/**/*",
-    "webpack.config.ts"
-  ],
-  "exclude": [
-    "node_modules/*",
-    "public/*"
-  ]
+  "include": ["src/**/*", "webpack.config.ts"],
+  "exclude": ["node_modules/*", "public/*"]
 }

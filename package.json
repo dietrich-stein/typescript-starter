@@ -7,7 +7,7 @@
     "start": "webpack serve",
     "deps:check": "npm-check --skip-unused",
     "deps:update": "npm-check --update --skip-unused --save-exact",
-    "pretty": "prettier --write \"./**/*.{js,ts,json}\""
+    "prettier": "prettier --write \"./**/*.{js,ts,json}\""
   },
   "repository": {
     "type": "git",

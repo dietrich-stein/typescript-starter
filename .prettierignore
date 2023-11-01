@@ -1,2 +1,6 @@
 **/.github
 **/dist
+package-lock.json
+package.json
+tsconfig.json
+webpack.config.ts
