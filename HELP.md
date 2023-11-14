@@ -12,3 +12,6 @@
 
 ##   Format the code with prettier 🖼️
 ###  npm run prettier
+
+##   Run the code linter 🐛
+###  npm run prettier
