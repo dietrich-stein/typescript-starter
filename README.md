@@ -52,6 +52,18 @@ npm run start
 npm run build
 ```
 
+## History
+
+Version 1.0.1
+
+- Added `npm run help` command
+- Improved eslint support
+
+Version 1.0
+
+- Initial version.
+
+
 
 
 
