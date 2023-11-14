@@ -1,8 +1,7 @@
 {
-  "private": true,
   "name": "typescript-starter",
   "description": "",
-  "version": "1.0.1",
+  "version": "0.0.2-alpha",
   "scripts": {
     "help": "cat < ./HELP.md && echo \"\nFile: HELP.md\n\"",
     "setup": "cross-env NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 node ./setup.mjs",

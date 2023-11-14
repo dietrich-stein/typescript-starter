@@ -1,5 +1,8 @@
 # TypeScript Starter
 
+> ALPHA RELEASE WARNING<br><br>
+> Please be advised NOT to use this until I have finished improving it. At that time I will release it as version `1.0.0` and will remove this warning.<br><br>
+
 ## Overview
 
 This is a standalone starter project that you can customize to your liking right out of the box. Here is a bullet list showing some of the more notable things going on:
@@ -34,8 +37,8 @@ Next, run this these commands to set up git to your own empty repo on GitHub:
 
 ```
 git init
-git remote add upstream https://github.com/YOUR-USERNAME/YOUR-REPO.git
-git branch --set-upstream-to=upstream/main main
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO.git
+git branch --set-upstream-to=origin/main main
 ```
 
 Try to pull with `git pull` and if things get messy then try `git pull --rebase`.
@@ -54,12 +57,18 @@ npm run build
 
 ## History
 
-Version 1.0.1
+Version 1.0.2-alpha
+
+- Added `npm run setup` command
+- Added dotenv configurations
+- Configured strict node version requirements
+
+Version 0.0.1-alpha
 
 - Added `npm run help` command
 - Improved eslint support
 
-Version 1.0
+Version 0.0.0-alpha
 
 - Initial version.
 
