@@ -1,4 +1,4 @@
-# Typescript Starter
+# TypeScript Starter
 
 ## Overview
 

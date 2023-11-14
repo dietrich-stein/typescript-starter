@@ -1,3 +1,6 @@
+##   Questionnaire to quickly brand/bootstrap the project 👷
+###  npm run setup
+
 ##   Start the development server 👷
 ###  npm run start
 
