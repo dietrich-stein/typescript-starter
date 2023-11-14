@@ -3,6 +3,7 @@
   "name": "typescript-starter",
   "version": "1.0.0",
   "scripts": {
+    "help": "cat < ./HELP.md && echo \"\nFile: HELP.md\n\"",
     "build": "cross-env NODE_ENV=production webpack",
     "start": "webpack serve",
     "deps:check": "npm-check --skip-unused",
