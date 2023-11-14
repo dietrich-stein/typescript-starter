@@ -26,6 +26,7 @@
 		},
 		"peacock.remoteColor": "#550000",
 		"cSpell.words": [
-		]
+		],
+		"dotenv.enableAutocloaking": false
 	}
 }
