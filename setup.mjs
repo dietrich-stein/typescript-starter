@@ -48,7 +48,7 @@ async function shellExec(command) {
 async function setupProject(changed, old) {
   var command;
 
-  // package.json
+  // package.json // https://docs.npmjs.com/cli/v7/commands/npm-pkg
   command = `npm pkg set name="${changed.packageName}"`;
   await shellExec(command); //const { error, stdout, stderr } =
 
